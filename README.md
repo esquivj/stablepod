@@ -1,77 +1,39 @@
-# Stablepod Landing Page
+# StablePod
 
-An editorial-style podcast landing page built with Astro, featuring a magazine aesthetic with bold typography and refined design.
+I made this editorial landing page for StableLab to present its StablePod podcast. The show covered DAO governance and DeFi across 29 episodes from 2023 to 2025.
 
-## Getting Started
+I co-hosted StablePod with Gustav Arentoft and built this page in Astro.
 
-1. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+![Screenshot of the StablePod page](docs/screenshot.png)
+<!-- screenshot: add docs/screenshot.png -->
 
-2. **Add your podcast cover:**
-   - Replace the placeholder at `/public/images/podcast-cover.jpg` with your actual podcast cover art
-   - Recommended size: 1400x1400px or larger
-   - Format: JPG or PNG
+## Run it locally
 
-3. **Update content:**
-   - Edit `/src/pages/index.astro` to update:
-     - Podcast title, tagline, and description
-     - Platform URLs (YouTube, Spotify, Apple Podcasts)
+Install dependencies:
 
-4. **Run development server:**
-   ```bash
-   npm run dev
-   ```
-   Open [http://localhost:4321](http://localhost:4321) in your browser.
-
-5. **Build for production:**
-   ```bash
-   npm run build
-   ```
-
-## Design Features
-
-- **Editorial aesthetic:** Magazine-inspired layout with sophisticated typography
-- **Typography:** Crimson Pro (serif) for headlines, DM Sans (sans-serif) for body text
-- **Dark theme:** Deep navy background with warm coral accents
-- **Animations:** Staggered fade-in on page load, smooth hover transitions
-- **Responsive:** Mobile-first design that adapts to all screen sizes
-- **SEO optimized:** Meta tags, Open Graph, and structured data included
-
-## Project Structure
-
-```
-/
-├── public/
-│   └── images/
-│       └── podcast-cover.jpg    # Replace with your cover art
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro         # Base layout with SEO
-│   └── pages/
-│       └── index.astro          # Landing page
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
-
-## Deployment
-
-This site is ready to deploy to Vercel, Netlify, or any static hosting platform.
-
-### Vercel
 ```bash
-npm install -g vercel
-vercel
+npm install
 ```
 
-## Customization
+Start the development server:
 
-- **Colors:** Edit CSS variables in `/src/layouts/Layout.astro`
-- **Fonts:** Update Google Fonts link in layout head
-- **Platform links:** Add or remove platforms in `/src/pages/index.astro`
+```bash
+npm run dev
+```
 
-## License
+Open [localhost:4321](http://localhost:4321).
 
-Created for StableLab.
+Build for production:
+
+```bash
+npm run build
+```
+
+The build runs `astro check` followed by `astro build`.
+
+To update the page:
+
+- Replace the cover art at `public/images/podcast-cover.jpg`.
+- Edit the page copy and the `platforms` array of listening links in `src/pages/index.astro`.
+- Change colors in `src/layouts/Layout.astro`.
+- Update fonts in `src/layouts/Layout.astro`. The page loads Crimson Pro and Space Grotesk through Google Fonts.
