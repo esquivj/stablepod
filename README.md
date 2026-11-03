@@ -1,39 +1,20 @@
 # StablePod
 
-I made this editorial landing page for StableLab to present its StablePod podcast. The show covered DAO governance and DeFi across 29 episodes from 2023 to 2025.
+![The StablePod archive page](docs/screenshot.jpg)
 
-I co-hosted StablePod with Gustav Arentoft and built this page in Astro.
+StablePod was StableLab's podcast on DAO governance and DeFi. It ran for 29 episodes from 2023 to 2025. I co-hosted the show with Gustav Arentoft and built this archive page for it.
 
-![Screenshot of the StablePod page](docs/screenshot.png)
-<!-- screenshot: add docs/screenshot.png -->
+The page introduces the show and its featured guests, and it links to every platform that streams the episodes.
+
+## Stack
+
+Astro 5 with TypeScript. The page loads Crimson Pro and Space Grotesk from Google Fonts.
 
 ## Run it locally
 
-Install dependencies:
-
 ```bash
 npm install
-```
-
-Start the development server:
-
-```bash
 npm run dev
 ```
 
-Open [localhost:4321](http://localhost:4321).
-
-Build for production:
-
-```bash
-npm run build
-```
-
-The build runs `astro check` followed by `astro build`.
-
-To update the page:
-
-- Replace the cover art at `public/images/podcast-cover.jpg`.
-- Edit the page copy and the `platforms` array of listening links in `src/pages/index.astro`.
-- Change colors in `src/layouts/Layout.astro`.
-- Update fonts in `src/layouts/Layout.astro`. The page loads Crimson Pro and Space Grotesk through Google Fonts.
+The dev server runs at [localhost:4321](http://localhost:4321). `npm run build` checks types with `astro check` and then builds the page.
